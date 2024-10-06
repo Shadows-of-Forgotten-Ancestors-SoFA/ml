@@ -26,9 +26,9 @@ rf.fit(X_train, y_train)
 
 joblib.dump(rf, 'wekeo_ndvi.plk')
 
-# rf = joblib.load('model.plk')
+# rf = joblib.load('wekeo_ndvi.plk')
 
-y_pred = rf.predict(X_train)
+y_pred = rf.predict(X_test)
 
 mse = mean_squared_error(y_test, y_pred)
 r2 = r2_score(y_test, y_pred)
